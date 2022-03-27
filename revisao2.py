@@ -9,12 +9,14 @@ if num > 0:
     print("O valor é positivo") 
 
 #Ler um valor e escrever a mensagem É MAIOR QUE 10 se o valor lido for maior que 10, caso contrário escrever NÃO É MAIOR QUE 10.
-num10 = int(input("Informe um valor: "))
 
+num10 = int(input("Informe um valor: "))
 if num10 >  10:
-    print("O valor é maior que 10")
-else:
-    print("O valor é menor que 10")
+    print("O {} é maior que 10".format(num10))
+if num10 == 10:
+    print("O {} é igual a 10".format(num10))
+if num10 < 10:
+    print("O {} não é maior que 10".format(num10))   
 
 #Calcule a soma de dois números, se o resultado for maior que 10, mostre-o na tela.
 
@@ -67,7 +69,7 @@ idade = int(input("Informe sua idade: "))
 if idade < 18:
     print("Você é menor de idade")
 if idade >= 18 and idade < 65:
-    print("Vocẽ é maior de idade")
+    print("Você é maior de idade")
 else:
     print("Você é idoso")
 
