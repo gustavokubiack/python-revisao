@@ -185,7 +185,7 @@ while nome != "ULTIMO":
         desconto = (valor_compra * 20) / 100
         valor_compra = valor_compra - desconto
 
-    if valor_compra < 500:
+    if valor_compra <= 500:
         desconto = (valor_compra * 15) / 100
         valor_compra = valor_compra - desconto
     print ("{}. Endereço: {}. Valor da compra com desconto: R${}".format(nome, endereco, valor_compra))
