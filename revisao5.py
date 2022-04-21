@@ -22,7 +22,9 @@ pitagoras(a, b)
 def notas (nota1, nota2):
     media = (nota1 + nota2) / 2
 
-    if media >= 6:
+    if nota1 > 10 or nota2 > 10:
+        print("Erro, informe notas de 0 a 10.")
+    elif media >= 6:
         print("PARABÉNS! Você foi aprovado.")
     else:
         print("Reprovado")
@@ -36,12 +38,14 @@ def pesoideal (h, sexo):
     
     if sexo == 1:
         mulher = (62.1 * h) - 44.7
-        print("Peso ideal: {}".format(mulher))
+        mulher = round(mulher,2)
+        print("Peso ideal: {}kg".format(mulher))
     elif sexo == 2:
         homem = (72.7 * h) - 58
-        print("Peso ideal: {}".format(homem))
+        homem = round(homem,2)
+        print("Peso ideal: {}kg".format(homem))
     else:
-        "Erro!"
+        print("Erro! Informe 1 para mulher e 2 para homem.")
 
 sexo = int(input("Sexo: 1 Fem / 2 Masc: "))
 h = float(input("Altura: "))
@@ -54,12 +58,12 @@ def poligonos (lado, medida):
         perimetro_triangulo = medida * 3
         print("É um triângulo \nPerímetro: {}".format(perimetro_triangulo))
     elif lado == 4:
-        perimetro_quadrado = medida * 2
-        print("É um quadrado \nÁrea: {}".format(perimetro_quadrado))
+        area_quadrado = medida * 2
+        print("É um quadrado \nÁrea: {}".format(area_quadrado))
     elif lado == 5:
         print("É um pentágono")
     else:
-        print("Erro")
+        print("Erro! Informe lados 3, 4 ou 5.")
         
 lado = float(input("Lados do polígono: "))
 medida = float(input("Medida de cada lado: "))
@@ -92,7 +96,7 @@ def num_mes (mes):
     elif mes == 12:
             print("Dezembro")
     else:
-        print("Erro")
+        print("Erro! Informe números de 1 a 12.")
 
 mes = int(input("Número: "))
 num_mes(mes)    
@@ -114,7 +118,7 @@ def dia_semana(dia):
     elif dia == 7:
         print("Domingo")
     else:
-        print("Erro")
+        print("Erro! Informe números de 1 a 7.")
 
 dia = int(input("Dia: "))
 dia_semana(dia)
