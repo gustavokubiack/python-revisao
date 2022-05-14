@@ -35,7 +35,7 @@ class Carro:
     def desligar (self):
         return f"{self.nomeMotorista} desligou o carro."
 
-car1 = Carro("BMW", "Jane")
+car1 = Carro("Ferrari", "Jane")
 print(car1.ligar())
 print(car1.dirigir())
 print(car1.frear())
