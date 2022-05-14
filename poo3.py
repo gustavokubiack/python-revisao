@@ -24,16 +24,16 @@ class Carro:
         self.nomeCarro = nomeCarro
 
     def ligar (self):
-        return f"{self.nomeCarro} foi ligado"
+        return f"{self.nomeCarro} foi ligado."
 
     def dirigir (self):
-        return f"{self.nomeMotorista} está dirigindo o carro: {self.nomeCarro}"
+        return f"{self.nomeMotorista} está dirigindo o carro: {self.nomeCarro}."
 
     def frear (self):
-        return f"{self.nomeCarro} freou"
+        return f"{self.nomeCarro} freou."
 
     def desligar (self):
-        return f"{self.nomeMotorista} desligou o carro"
+        return f"{self.nomeMotorista} desligou o carro."
 
 car1 = Carro("BMW", "Jane")
 print(car1.ligar())
