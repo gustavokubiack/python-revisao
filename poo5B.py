@@ -84,3 +84,27 @@ class Funcionario:
 func1 = Funcionario("Harry", 1000)
 print(func1.novoSalario(10))
 print(func1.dadosFuncionario())
+
+#Exercício 5
+
+class Carro:
+
+    def __init__(self, consumo, combustivelTanque):
+        self.consumo = consumo
+        self.combustivelTanque = combustivelTanque
+
+    def obterGasolina(self):
+        return f"Quantidade de gasolina no tanque: {self.combustivelTanque}L"
+
+    def adicionarGasolina(self, gasolina):
+        self.combustivelTanque = gasolina + self.combustivelTanque
+
+    def andar(self, distancia):
+        restouGasolina = self.combustivelTanque - (distancia * self.combustivelTanque) / (self.combustivelTanque * self.consumo)
+        return f"Distância percorrida: {distancia}km \nCombustível restante: {restouGasolina}L"
+
+
+fusca = Carro(15,0)
+fusca.adicionarGasolina(30)
+print(fusca.obterGasolina())
+print(fusca.andar(300))
