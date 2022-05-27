@@ -18,7 +18,7 @@ print(usuario1.hello(), usuario1.nome, usuario1.sobrenome)
 usuario2 = Usuario("Jane", "Silva")
 print(usuario2.nome, usuario2.sobrenome)
 
-#Exercício com Input
+#Exercício sem Input
 class Usuario:
 
     def __init__(self, nome, sobrenome):
