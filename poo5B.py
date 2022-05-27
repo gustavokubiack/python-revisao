@@ -89,7 +89,7 @@ print(func1.dadosFuncionario())
 
 class Carro:
 
-    def __init__(self, consumo, combustivelTanque):
+    def __init__(self, consumo, combustivelTanque = 0):
         self.consumo = consumo
         self.combustivelTanque = combustivelTanque
 
@@ -101,11 +101,39 @@ class Carro:
 
     def andar(self, distancia):
         self.combustivelTanque = self.combustivelTanque - (distancia * self.combustivelTanque) / (self.combustivelTanque * self.consumo)
-        return f"Distância percorrida: {distancia}km \nCombustível restante: {self.combustivelTanque}L"
+    
+
+fusca = Carro(10,0)
+fusca.adicionarGasolina(10)
+print(fusca.obterGasolina())
+fusca.andar(50)
+print(fusca.obterGasolina())
+
+#Exercício 6
+
+class ContaCorrente:
+
+    def __init__(self, numConta, nomeUsuario, saldo = 0):
+        self.numConta = numConta
+        self.nomeUsuario = nomeUsuario
+        self.saldo = saldo
+
+    def alteraNome(self, novoNome):
+        self.nome = novoNome
+        return f"Nome: {self.nome}"
+
+    def deposito(self, deposito):
+        self.saldo = self.saldo + deposito
+        return f"Saldo da conta: R${self.saldo}"
+
+    def saque(self, saque):
+        self.saldo = self.saldo - saque
+        return f"Saldo da conta: R${self.saldo}"
+
+user1 = ContaCorrente(123, "Gustavo Kubiack")
+print(user1.alteraNome("Gustavo Henrique Kubiack"))
+print(user1.deposito(100))
+print(user1.saque(25))
 
 
-fusca = Carro(15,0)
-fusca.adicionarGasolina(30)
-print(fusca.obterGasolina())
-print(fusca.andar(300))
-print(fusca.obterGasolina())
+
