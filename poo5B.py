@@ -100,11 +100,12 @@ class Carro:
         self.combustivelTanque = gasolina + self.combustivelTanque
 
     def andar(self, distancia):
-        restouGasolina = self.combustivelTanque - (distancia * self.combustivelTanque) / (self.combustivelTanque * self.consumo)
-        return f"Distância percorrida: {distancia}km \nCombustível restante: {restouGasolina}L"
+        self.combustivelTanque = self.combustivelTanque - (distancia * self.combustivelTanque) / (self.combustivelTanque * self.consumo)
+        return f"Distância percorrida: {distancia}km \nCombustível restante: {self.combustivelTanque}L"
 
 
 fusca = Carro(15,0)
 fusca.adicionarGasolina(30)
 print(fusca.obterGasolina())
 print(fusca.andar(300))
+print(fusca.obterGasolina())
