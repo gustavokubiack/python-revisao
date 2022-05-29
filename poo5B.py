@@ -61,9 +61,18 @@ class Retangulo:
     def perimetroRet(self):
         return f"Perímetro: {(self.base * 2)+(self.altura * 2)}"
 
+#Teste sem input
 ret1 = Retangulo(2,4)
 print(ret1.areaRet())
 print(ret1.perimetroRet())
+
+#Teste com com input (pedindo a base e a altura)
+ret2 = Retangulo(
+    base = int(input("Informe o comprimento do local: ")),
+    altura = int(input("Informe a largura do local: "))
+)
+print(ret2.areaRet())
+print(ret2.perimetroRet())
 
 #Exercício 4
 
