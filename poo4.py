@@ -92,7 +92,7 @@ class Pessoa:
         self.__ultimoNome = sobrenome
 
 pessoa1 = Pessoa()
-pessoa1.setPrimeiroNome("Gustavo")
-pessoa1.setUltimoNome("Kubiack")
+pessoa1.setPrimeiroNome("João")
+pessoa1.setUltimoNome("Carvalho")
 print(pessoa1.getPrimeiroNome())
 print(pessoa1.getUltimoNome())
